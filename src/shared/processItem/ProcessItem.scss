@@ -1,0 +1,48 @@
+@use "../../styles/const.scss" as style;
+
+.process-item {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: relative;
+  height: 280px;
+  .process-item-dark,
+  .process-item-grad, .process-No,
+  .process-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .process-item-dark {
+    width: 198px;
+    top: 0px;
+  }
+  .process-item-grad {
+    width: 159px;
+    top: 20px;
+  }
+  .process-No {
+    top: 60px;
+    font-weight: 700;
+    color: style.$darkcol;
+    font-size: 64px;
+    max-width: 190px;
+  }
+  .process-bottom {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 10px;
+    img {
+      width: 28px;
+    }
+    p {
+      font-size: 24px;
+      color: style.$white;
+      min-width: 170px;
+      white-space: normal;
+      font-weight: 700;
+    }
+  }
+}

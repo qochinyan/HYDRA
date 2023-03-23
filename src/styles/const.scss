@@ -1,0 +1,76 @@
+$black: #101010;
+$grey: #5a5a5a;
+$white: #ffffff;
+$bg: #302c42;
+$darkcol: #343045;
+$bt-gradient: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+$border: #c0b7e854;
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align0;
+  justify-content: $justify;
+}
+@mixin btn {
+  padding: 17px 36px;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@mixin thin-heading {
+  font-weight: 200;
+  font-size: 36px;
+  color: #ffffff;
+}
+@mixin fit-heading {
+  font-weight: 700;
+  font-size: 36px;
+  color: #ffffff;
+}
+@mixin gradient-button {
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  border: none;
+  color: #343045;
+  border-radius: 40px;
+  font-size: 12px;
+  padding: 17px 36px;
+  font-weight: 700;
+  cursor: pointer;
+}
+@mixin paragraph {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  color: white;
+}
+@mixin arrow-section {
+  display: flex;
+  margin-top: 90px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+  @include fit-heading;
+  text-align: left;
+  .arrow-section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    div {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      .thin {
+        @include thin-heading;
+      }
+      white-space: nowrap;
+      img {
+        width: 150px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  p {
+    @include paragraph;
+    max-width: 652px;
+  }
+}
